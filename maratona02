@@ -82,8 +82,148 @@ if ($horario >= 10 && $horario <= 12) {
 
 echo "<br>";
 
+//Determinar o dia da semana
+
+$numero2 = 3;
+
+switch ($numero2) {
+    case 1:
+        echo "Domingo";
+        break;
+    case 2;
+        echo "Segunda-feira";
+        break;
+    case 3:
+        echo "Terça-feira";
+        break;
+    case 4:
+        echo "Quarta-feira";
+        break;
+    case 5:
+        echo "Quinta-feira";
+        break;
+    case 6:
+        echo "Sexta-feira";
+        break;
+    case 7:
+        echo "Sábado";
+        break;
+    default:
+        echo "Número inválido! Digite de 1 a 7.";
+}
+
+echo "<br>";
+
+//Categoria do estudante pela nota
+
+$nota = 7.5;
+
+switch (true) {
+    case ($nota >= 0 && $nota <= 4.9):
+        echo "Reprovado";
+        break;
+
+    case ($nota >= 5 && $nota <= 6.9):
+        echo "Recuperação";
+        break;
+    
+    case ($nota >= 7 && $nota <= 10):
+        echo "Aprovado";
+        break;
+
+    default:
+        echo "Nota inválida!";
+
+echo "<br>";
+
+//Preço final com código de desconto
+
+$preco = 100;
+$codigo = 2;
+
+switch ($codigo) {
+    case 1:
+        $desconto = 0.10;
+        break;
+    
+    case 2:
+        $desconto = 0.20;
+        break;
+    
+    case 3:
+        $desconto = 0.30;
+        break;
+
+    default:
+        die("Código de desconto inválido!");
+}
+
+$precoFinal = $preco - ($preco * $desconto);
+
+echo "Preço original: R$ $preco<br>";
+echo "Preço com desconto: R$ $precoFinal";
+
+echo "<br>";
+
+//Criar array com nomes de 5 amigos
+
+$amigos = [];
+
+for ($i = 1; $i <= 5; $i++) {
+    $amigos[] = "Amigo $i";
+}
+
+echo "<pre>";
+print_r($amigos);
+echo "</pre>";
+
+echo "<br>";
+
+//Remover o segundo elemento de um array
+
+$array = [10, 20, 30, 40, 50];
+
+unset($array[1]);
+
+$array = array_values($array);
+
+print_r($array);
+
+echo "<br>";
+
+//Contar números pares em um array
+
+$numeros = [];
+
+for ($i = 0; $i , 10; $i++) {
+    $numeros[] = rand(1, 100);
+}
+
+$pares = 0;
+
+foreach ($numeros as $n) {
+    if ($n % 2 == 0) {
+        $pares++;
+    }  
+}
+
+echo "Números: ";
+print_r($numeros);
+
+echo "<br>Total de pares: $pares";
+
+echo "<br>";
+
+//Combinar dois arrays
+
+$array1 = [1, 2, 3, 4, 5];
+$array2 = [6, 7, 8, 9, 10];
+
+$arrayFinal = array_merge($array1, $array2);
+
+print_r($arrayFinal);
 
 ?>
-  
+    
 </body>
 </html>
