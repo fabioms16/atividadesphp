@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratona02</title>
+</head>
+<body>
+
+<?php
+//Verificar se o número se é positivo ou negativo
+$numero = -5;
+
+if ($numero > 0) {
+    echo "O número é positivo";
+} elseif ($numero < 0) {
+    echo "O número é negativo";
+} else {
+    echo "O número é zero";
+}
+
+echo "<br>";
+
+//Classificação da nota do estudante
+
+$nota = 8.7;
+
+if ($nota >= 0 && $nota <= 4.9) {
+    echo "Reprovado";
+} elseif ($nota >= 5 && $nota <= 6.9) {
+    echo "Recuperação";
+} elseif ($nota >= 7 && $nota <= 8.9) {
+    echo "Aprovado";
+} elseif ($nota >= 9 && $nota <= 10) {
+    echo "Aprovado com Distinção";    
+} else {
+    echo "Nota inválida";
+}
+
+echo "<br>";
+
+//Verificar se pode votar
+
+$idade = 16;
+
+if ($idade < 16) {
+    echo "Não pode votar";
+} elseif ($idade >= 16 && $idade <= 17) {
+    echo "Pode votar (Não é obrigatório)";
+} else
+    echo "Pode votar (Obrigatório)";
+
+echo "<br>";
+
+//Verificar se o número é par ou ímpar
+
+$numero = 11;
+
+if ($numero % 2 == 0) {
+    echo "O número é par";
+} else {
+    echo "O número é ímpar";
+}
+
+echo "<br>";
+
+//Preço do ingresso de cinema baseado no horário
+
+$horario = 19;
+
+if ($horario >= 10 && $horario <= 12) {
+    echo "Preço do ingresso: R$ 10,00 (Matinal)";
+} elseif ($horario >=12.01 && $horario <= 17) {
+    echo "Preço do ingresso: R$ 20,00 (Diurno)";
+} elseif ($horario >=17.01 && $horario <= 22) {
+    echo "Preço do ingresso: R$ 30,00 (Noturno)";
+} elseif ($horario >=22.01 && $horario <= 23.59) {
+    echo "Preço do ingresso: R$ 40,00 (Última sessão)";
+} else {
+    echo "Horário inválido";
+}
+
+echo "<br>";
+
+
+?>
+  
+</body>
+</html>
